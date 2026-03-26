@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APOLLO ENERGY GROUP — 90-Day Policy Action Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* ============================================
+     RESET & SUBSTRATE
+     Apollo Energy Group Brand Palette
+     Teal/Cyan primary, Deep Navy, Energy Green
+     Swiss Industrial Print structure maintained
+     ============================================ */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    /* Apollo brand — extracted from logo */
+    --apollo-teal: #00A5B8;
+    --apollo-teal-bright: #00C9DB;
+    --apollo-teal-dim: #008A99;
+    --apollo-navy: #0A1E3D;
+    --apollo-navy-mid: #132E5B;
+    --apollo-green: #5EBD6E;
+    --apollo-green-dim: #3D9E4E;
+    --apollo-aqua: #40D9D0;
+    --apollo-teal-bg: #E6F7F9;
+
+    /* Substrate */
+    --substrate: #F4F5F7;
+    --substrate-cool: #EBF0F2;
+    --ink: #0A1E3D;
+    --ink-soft: #1E3354;
+    --ink-muted: #5A6B80;
+    --ink-ghost: #8A9AB0;
+    --accent: #00A5B8;
+    --accent-bright: #00C9DB;
+    --accent-dim: #008A99;
+    --accent-bg: #E6F7F9;
+    --energy-green: #5EBD6E;
+    --alert: #D94F00;
+    --alert-bg: #FFF0E6;
+    --rule: #C8CDD5;
+    --rule-heavy: #0A1E3D;
+    --white: #FFFFFF;
+
+    --font-display: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Space Mono', monospace;
+
+    --grid-gap: 1px;
+    --section-pad: clamp(2rem, 5vw, 6rem);
+    --content-max: 1400px;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background: var(--substrate);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    overflow-x: hidden;
+  }
+
+  /* Global noise overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  .t-display {
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 0.88;
+    color: var(--ink);
+  }
+
+  .t-display--hero {
+    font-size: clamp(4rem, 12vw, 10rem);
+  }
+
+  .t-display--section {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .t-display--sub {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    letter-spacing: -0.03em;
+    line-height: 0.92;
+  }
+
+  .t-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .t-label--accent {
+    color: var(--accent);
+  }
+
+  .t-label--alert {
+    color: var(--alert);
+  }
+
+  .t-body {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.65;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink-soft);
+    max-width: 65ch;
+  }
+
+  .t-data {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+  }
+
+  .t-stat {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  /* ============================================
+     STRUCTURAL ELEMENTS
+     ============================================ */
+  .container {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 var(--section-pad);
+  }
+
+  .rule { border: none; border-top: 1px solid var(--rule); margin: 0; }
+  .rule--heavy { border-top: 2px solid var(--rule-heavy); }
+  .rule--accent { border-top: 3px solid var(--accent); }
+
+  .section {
+    padding: var(--section-pad) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .section--dark {
+    background: var(--apollo-navy);
+    color: var(--substrate);
+    border-bottom-color: #1A3460;
+  }
+
+  .section--dark .t-display { color: var(--substrate); }
+  .section--dark .t-label { color: var(--ink-ghost); }
+  .section--dark .t-body { color: #B0BFD0; }
+  .section--dark .t-data { color: var(--substrate); }
+  .section--dark .rule { border-top-color: #1A3460; }
+
+  .grid-divider {
+    display: grid;
+    gap: var(--grid-gap);
+    background: var(--rule);
+  }
+
+  .grid-divider > * {
+    background: var(--substrate);
+  }
+
+  .section--dark .grid-divider {
+    background: #1A3460;
+  }
+
+  .section--dark .grid-divider > * {
+    background: var(--apollo-navy);
+  }
+
+  /* ============================================
+     ANIMATIONS (MOTION_INTENSITY: 6)
+     ============================================ */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stagger-1 { transition-delay: 0.05s; }
+  .stagger-2 { transition-delay: 0.1s; }
+  .stagger-3 { transition-delay: 0.15s; }
+  .stagger-4 { transition-delay: 0.2s; }
+  .stagger-5 { transition-delay: 0.25s; }
+  .stagger-6 { transition-delay: 0.3s; }
+  .stagger-7 { transition-delay: 0.35s; }
+  .stagger-8 { transition-delay: 0.4s; }
+
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+
+  /* ============================================
+     01 — TITLE / HERO
+     ============================================ */
+  .hero {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: var(--section-pad) 0;
+    border-bottom: 3px solid var(--accent);
+    position: relative;
+    overflow: hidden;
+    background: var(--apollo-navy);
+    color: var(--substrate);
+  }
+
+  /* Triangular brand echo — top-right */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    width: 50vw;
+    height: 50vw;
+    max-width: 600px;
+    max-height: 600px;
+    background: linear-gradient(135deg, var(--apollo-teal) 0%, var(--apollo-green) 100%);
+    opacity: 0.06;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    pointer-events: none;
+  }
+
+  .hero__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: end;
+    gap: 2rem;
+    padding: 0 var(--section-pad);
+    max-width: var(--content-max);
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero__overline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero__overline::before {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    display: block;
+  }
+
+  .hero__title {
+    max-width: 12ch;
+    color: var(--substrate);
+  }
+
+  .hero__brand-accent {
+    color: var(--apollo-teal-bright);
+  }
+
+  .hero__meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #1A3460;
+  }
+
+  .hero__meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .hero__meta-item .t-label { color: var(--ink-ghost); }
+  .hero__meta-item .t-data { color: var(--substrate); }
+
+  .hero__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem var(--section-pad);
+    border-top: 1px solid #1A3460;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero__footer .t-label { color: var(--ink-ghost); }
+
+  .hero__crosshair {
+    position: absolute;
+    top: var(--section-pad);
+    right: var(--section-pad);
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: #3A5A80;
+    letter-spacing: 0.15em;
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  .hero__logo {
+    width: clamp(140px, 18vw, 220px);
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 165, 184, 0.3));
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+
+  /* Energy triangle decorative element */
+  .hero__triangle {
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 104px solid var(--apollo-teal);
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  .hero__triangle--sm {
+    bottom: 25%;
+    right: 12%;
+    border-left-width: 30px;
+    border-right-width: 30px;
+    border-bottom-width: 52px;
+    border-bottom-color: var(--apollo-green);
+    opacity: 0.06;
+  }
+
+  /* ============================================
+     02 — EXEC SUMMARY
+     ============================================ */
+  .exec-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .exec-grid__body { padding-right: 2rem; }
+
+  .exec-grid__sidebar {
+    border-left: 1px solid var(--rule);
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .exec-grid__sidebar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .exec-grid__sidebar-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  /* ============================================
+     03 — PRIORITY CARDS
+     ============================================ */
+  .priority-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--grid-gap);
+    background: var(--rule-heavy);
+    margin-top: 2rem;
+  }
+
+  .priority-grid > * { background: var(--substrate); }
+
+  .priority-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .priority-card--wide {
+    grid-column: 1 / -1;
+  }
+
+  .priority-card__header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .priority-card__number {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .priority-card__number--teal { color: var(--accent); }
+  .priority-card__number--green { color: var(--energy-green); }
+
+  .priority-card__details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .priority-card__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  /* ============================================
+     04 — TIMELINE
+     ============================================ */
+  .timeline-header {
+    display: grid;
+    grid-template-columns: 160px repeat(3, 1fr);
+    gap: var(--grid-gap);
+    background: var(--rule-heavy);
+    margin-top: 2rem;
+  }
+
+  .timeline-header > * { background: var(--apollo-navy); padding: 1rem 1.5rem; }
+
+  .timeline-header__label {
+    display: flex;
+    align-items: center;
+    background: var(--accent);
+  }
+
+  .timeline-phase {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .timeline-phase__name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    color: var(--substrate);
+    text-transform: uppercase;
+  }
+
+  .timeline-phase__dates {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    color: var(--ink-ghost);
+    letter-spacing: 0.06em;
+  }
+
+  .timeline-tracks {
+    display: grid;
+    grid-template-columns: 160px repeat(3, 1fr);
+    gap: var(--grid-gap);
+    background: var(--rule);
+  }
+
+  .timeline-tracks > * { background: var(--substrate); }
+
+  .timeline-track-label {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+    border-right: 2px solid var(--rule-heavy);
+  }
+
+  .timeline-cell {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .timeline-cell__item {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .timeline-cell__item::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* Milestone bar */
+  .milestones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap);
+    background: var(--accent);
+    margin-top: 2rem;
+  }
+
+  .milestone {
+    background: var(--substrate);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .milestone--alert {
+    background: var(--alert);
+  }
+
+  .milestone--alert .t-label { color: var(--substrate); opacity: 0.8; }
+  .milestone--alert .t-data { color: var(--substrate); }
+
+  .milestone--accent {
+    background: var(--accent);
+  }
+
+  .milestone--accent .t-label { color: var(--substrate); opacity: 0.8; }
+  .milestone--accent .t-data { color: var(--substrate); }
+
+  /* ============================================
+     05 — PHASE DETAIL SECTIONS
+     ============================================ */
+  .phase-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: end;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--rule-heavy);
+  }
+
+  .phase-header__number {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(5rem, 10vw, 8rem);
+    letter-spacing: -0.05em;
+    line-height: 0.8;
+    color: var(--rule);
+  }
+
+  .phase-header__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .phase-header__dates {
+    text-align: right;
+  }
+
+  .phase-description {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .phase-tracks {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--grid-gap);
+    background: var(--rule);
+    margin-top: 2rem;
+  }
+
+  .phase-tracks > * { background: var(--substrate); }
+
+  .phase-track {
+    padding: 2rem;
+  }
+
+  .phase-track--wide {
+    grid-column: 1 / -1;
+  }
+
+  .phase-track__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1.5rem;
+  }
+
+  .phase-track__icon {
+    width: 32px;
+    height: 32px;
+    background: var(--apollo-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--substrate);
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+  }
+
+  .phase-track__icon--teal { background: var(--accent); }
+  .phase-track__icon--green { background: var(--energy-green); }
+
+  .phase-track__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .phase-track__list li {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink-soft);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .phase-track__list li::before {
+    content: '//';
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0;
+  }
+
+  /* ============================================
+     06 — ACTION TABLE
+     ============================================ */
+  .action-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+
+  .action-table th {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--substrate);
+    background: var(--apollo-navy);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .action-table td {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--rule);
+    text-transform: none;
+    vertical-align: top;
+  }
+
+  .action-table tr:hover td {
+    background: var(--substrate-cool);
+    transition: background 0.2s ease;
+  }
+
+  .action-table .td-week {
+    font-weight: 700;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .action-table .td-priority { white-space: nowrap; }
+  .action-table .td-priority--p1 { color: var(--accent); font-weight: 600; }
+  .action-table .td-priority--p2 { color: var(--apollo-navy-mid); font-weight: 600; }
+  .action-table .td-priority--p3 { color: var(--energy-green); font-weight: 600; }
+
+  .action-table .td-deadline {
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  /* ============================================
+     07 — RISK REGISTER
+     ============================================ */
+  .risk-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap);
+    background: var(--rule);
+    margin-top: 2rem;
+  }
+
+  .risk-grid > * { background: var(--substrate); }
+
+  .risk-row {
+    display: grid;
+    grid-template-columns: 2fr 0.7fr 1.3fr 2fr;
+    gap: 0;
+  }
+
+  .risk-row--header {
+    background: var(--apollo-navy);
+  }
+
+  .risk-row--header > * {
+    background: var(--apollo-navy);
+  }
+
+  .risk-cell {
+    padding: 1rem 1.25rem;
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .risk-cell:last-child { border-right: none; }
+
+  .risk-cell .t-data {
+    color: var(--ink);
+  }
+
+  .risk-row--header .risk-cell {
+    border-right-color: #1A3460;
+  }
+
+  .risk-likelihood {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .risk-likelihood--high { color: var(--alert); }
+  .risk-likelihood--medium { color: #B45309; }
+  .risk-likelihood--low { color: var(--energy-green); }
+
+  /* ============================================
+     08 — KPI METRICS
+     ============================================ */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap);
+    background: var(--rule);
+    margin-top: 2rem;
+  }
+
+  .kpi-grid > * { background: var(--substrate); }
+
+  .kpi-row {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    gap: 0;
+  }
+
+  .kpi-row--header { background: var(--apollo-navy); }
+  .kpi-row--header > * { background: var(--apollo-navy); }
+
+  .kpi-cell {
+    padding: 1rem 1.25rem;
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .kpi-cell:last-child { border-right: none; }
+
+  .kpi-row--header .kpi-cell { border-right-color: #1A3460; }
+
+  .kpi-target {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: none;
+  }
+
+  .kpi-target--final {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ============================================
+     09 — POLICY MONITOR
+     ============================================ */
+  .monitor-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--grid-gap);
+    background: var(--rule-heavy);
+    margin-top: 2rem;
+  }
+
+  .monitor-grid > * { background: var(--substrate); }
+
+  .monitor-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .monitor-card__source {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+  }
+
+  .monitor-card__desc {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  /* ============================================
+     10 — WEEKLY CADENCE
+     ============================================ */
+  .cadence-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+    margin-top: 2rem;
+    border: 2px solid var(--rule-heavy);
+  }
+
+  .cadence-day {
+    background: var(--apollo-navy);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+
+  .cadence-day__text {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    color: var(--substrate);
+  }
+
+  .cadence-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap);
+    background: var(--rule);
+  }
+
+  .cadence-items > * { background: var(--substrate); }
+
+  .cadence-item {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    align-items: start;
+  }
+
+  .cadence-item__num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: var(--accent);
+    line-height: 1;
+    padding-top: 0.15rem;
+  }
+
+  .cadence-item__text {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  /* ============================================
+     11 — CLOSING
+     ============================================ */
+  .closing {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background: var(--apollo-navy);
+    color: var(--substrate);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Triangular brand echo on closing slide */
+  .closing::before {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 50vw;
+    height: 50vw;
+    max-width: 600px;
+    max-height: 600px;
+    background: linear-gradient(135deg, var(--apollo-teal) 0%, var(--apollo-green) 100%);
+    opacity: 0.05;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    pointer-events: none;
+  }
+
+  .closing__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 3rem;
+    padding: var(--section-pad);
+    max-width: var(--content-max);
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .closing__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+    background: #1A3460;
+  }
+
+  .closing__stats > * { background: var(--apollo-navy); }
+
+  .closing__stat {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .closing__stat-value {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--apollo-teal-bright);
+  }
+
+  .closing__stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    color: var(--ink-ghost);
+  }
+
+  .closing__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem var(--section-pad);
+    border-top: 1px solid #1A3460;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ============================================
+     CALLOUT BOXES
+     ============================================ */
+  .callout {
+    border-left: 3px solid var(--alert);
+    padding: 1.25rem 1.5rem;
+    background: var(--alert-bg);
+    margin-top: 2rem;
+  }
+
+  .callout__text {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.55;
+    color: var(--alert);
+  }
+
+  /* ============================================
+     NAVIGATION DOT RAIL
+     ============================================ */
+  .nav-rail {
+    position: fixed;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 100;
+  }
+
+  .nav-rail__dot {
+    width: 8px;
+    height: 8px;
+    background: var(--rule);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0;
+  }
+
+  .nav-rail__dot:hover {
+    background: var(--ink-muted);
+  }
+
+  .nav-rail__dot--active {
+    background: var(--accent);
+    height: 24px;
+  }
+
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 768px) {
+    .exec-grid { grid-template-columns: 1fr; }
+    .exec-grid__sidebar { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 2rem; }
+    .priority-grid { grid-template-columns: 1fr; }
+    .timeline-header, .timeline-tracks { grid-template-columns: 1fr; }
+    .timeline-track-label { border-right: none; border-bottom: 2px solid var(--rule-heavy); }
+    .phase-header { grid-template-columns: 1fr; }
+    .phase-header__number { font-size: 4rem; }
+    .phase-header__dates { text-align: left; }
+    .phase-tracks { grid-template-columns: 1fr; }
+    .risk-row { grid-template-columns: 1fr; }
+    .risk-cell { border-right: none; border-bottom: 1px solid var(--rule); }
+    .kpi-row { grid-template-columns: 1fr; }
+    .kpi-cell { border-right: none; border-bottom: 1px solid var(--rule); }
+    .monitor-grid { grid-template-columns: 1fr; }
+    .milestones { grid-template-columns: 1fr 1fr; }
+    .closing__stats { grid-template-columns: 1fr; }
+    .action-table { font-size: 0.6875rem; }
+    .action-table th, .action-table td { padding: 0.5rem; }
+    .cadence-day { writing-mode: horizontal-tb; transform: none; padding: 1rem; }
+    .cadence-grid { grid-template-columns: 1fr; }
+    .nav-rail { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION RAIL
+     ============================================ -->
+<nav class="nav-rail" aria-label="Section navigation">
+  <button class="nav-rail__dot nav-rail__dot--active" data-target="hero" title="Title"></button>
+  <button class="nav-rail__dot" data-target="exec" title="Executive Summary"></button>
+  <button class="nav-rail__dot" data-target="priorities" title="Priorities"></button>
+  <button class="nav-rail__dot" data-target="timeline" title="Timeline"></button>
+  <button class="nav-rail__dot" data-target="phase1" title="Phase 1"></button>
+  <button class="nav-rail__dot" data-target="phase2" title="Phase 2"></button>
+  <button class="nav-rail__dot" data-target="phase3" title="Phase 3"></button>
+  <button class="nav-rail__dot" data-target="risk" title="Risk Register"></button>
+  <button class="nav-rail__dot" data-target="kpi" title="KPIs"></button>
+  <button class="nav-rail__dot" data-target="cadence" title="Cadence"></button>
+  <button class="nav-rail__dot" data-target="closing" title="Close"></button>
+</nav>
+
+<!-- ============================================
+     01 — HERO / TITLE
+     ============================================ -->
+<section class="hero" id="hero">
+  <div class="hero__triangle"></div>
+  <div class="hero__triangle hero__triangle--sm"></div>
+
+  <div class="hero__content">
+    <img src="../apollo-logo-transparent.png" alt="Apollo Energy Group" class="hero__logo animate-on-scroll" />
+
+    <div class="hero__overline animate-on-scroll stagger-1">
+      <span class="t-label t-label--accent">[ APOLLO ENERGY GROUP ]</span>
+    </div>
+
+    <h1 class="t-display t-display--hero hero__title animate-on-scroll stagger-2">
+      90-DAY<br><span class="hero__brand-accent">ACTION</span><br>PLAN
+    </h1>
+
+    <div class="hero__meta animate-on-scroll stagger-3">
+      <div class="hero__meta-item">
+        <span class="t-label">PERIOD</span>
+        <span class="t-data">Q2 2026 /// MAR &mdash; JUN 2026</span>
+      </div>
+      <div class="hero__meta-item">
+        <span class="t-label">TERRITORY</span>
+        <span class="t-data">TX &middot; OK &middot; AR &middot; LA &middot; TN</span>
+      </div>
+      <div class="hero__meta-item">
+        <span class="t-label">CLASSIFICATION</span>
+        <span class="t-data" style="color: var(--apollo-teal-bright);">CONFIDENTIAL</span>
+      </div>
+      <div class="hero__meta-item">
+        <span class="t-label">REVISION</span>
+        <span class="t-data">REV 1.0 &mdash; 2026.03.25</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__footer animate-on-scroll stagger-4">
+    <span class="t-label">PREPARED: MARCH 2026</span>
+    <span class="t-label">APOLLO ENERGY GROUP &copy; 2026</span>
+  </div>
+
+  <div class="hero__crosshair">
+    +<br>
+    DOC-APL-90D<br>
+    2026-Q2-001
+  </div>
+</section>
+
+<!-- ============================================
+     02 — EXECUTIVE SUMMARY
+     ============================================ -->
+<section class="section" id="exec">
+  <div class="container">
+    <span class="t-label t-label--accent animate-on-scroll">[ 01 &mdash; EXECUTIVE SUMMARY ]</span>
+
+    <h2 class="t-display t-display--section animate-on-scroll stagger-1" style="margin-top: 1rem;">
+      THE<br>SITUATION
+    </h2>
+
+    <div class="exec-grid animate-on-scroll stagger-2">
+      <div class="exec-grid__body">
+        <p class="t-body">
+          Apollo Energy Group operates across grid/energy infrastructure O&amp;M, EV charging installation, and LNG/CNG infrastructure and backup power systems throughout Texas, Oklahoma, Arkansas, Louisiana, and Tennessee.
+        </p>
+        <p class="t-body" style="margin-top: 1rem;">
+          Three concurrent policy opportunities &mdash; two with hard expiration dates in Q2 2026 &mdash; demand structured, parallel execution beginning immediately.
+        </p>
+        <p class="t-body" style="margin-top: 1rem;">
+          Apollo&rsquo;s geographic footprint and service mix (O&amp;M, EV charging, LNG/CNG, backup power) create a rare alignment with all three priority opportunities simultaneously. The plan sequences actions so no track blocks another, and assigns clear ownership to prevent execution gaps.
+        </p>
+      </div>
+
+      <div class="exec-grid__sidebar">
+        <div class="exec-grid__sidebar-item">
+          <span class="t-label t-label--alert">WHY NOW</span>
+          <span class="t-data" style="margin-top: 0.5rem;">SECTION 30C EXPIRES JUN 30, 2026</span>
+          <span class="t-label" style="margin-top: 0.25rem;">FORFEITS UP TO $100K/PORT IF NOT COMPLETE</span>
+        </div>
+        <div class="exec-grid__sidebar-item">
+          <span class="t-label t-label--accent">CRITICAL WINDOW</span>
+          <span class="t-data" style="margin-top: 0.5rem;">DOE SPARK/GRIP CONCEPT PAPER</span>
+          <span class="t-label" style="margin-top: 0.25rem;">CLOSES APRIL 2, 2026</span>
+        </div>
+        <div class="exec-grid__sidebar-item">
+          <span class="t-label t-label--accent">FIRST MOVER</span>
+          <span class="t-data" style="margin-top: 0.5rem;">TBPP RULEMAKING ACTIVE NOW</span>
+          <span class="t-label" style="margin-top: 0.25rem;">VENDOR REGISTRATION WINDOW OPEN</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     03 — THREE PRIORITIES
+     ============================================ -->
+<section class="section" id="priorities">
+  <div class="container">
+    <span class="t-label t-label--accent animate-on-scroll">[ 02 &mdash; STRATEGIC PRIORITIES ]</span>
+
+    <h2 class="t-display t-display--section animate-on-scroll stagger-1" style="margin-top: 1rem;">
+      THREE<br>TRACKS
+    </h2>
+
+    <div class="priority-grid animate-on-scroll stagger-2">
+      <!-- P1 -->
+      <div class="priority-card hover-lift">
+        <div class="priority-card__header">
+          <span class="priority-card__number priority-card__number--teal">P1</span>
+          <span class="t-label t-label--accent">TEXAS BACKUP POWER PACKAGE</span>
+        </div>
+        <h3 class="t-display t-display--sub">TBPP</h3>
+        <p class="t-body">$1.8B program &mdash; Grants $500/kW plus forgivable O&amp;M loans for critical facility backup power. Apollo role: Approved Vendor.</p>
+        <div class="priority-card__details">
+          <div class="priority-card__detail">
+            <span class="t-label">VALUE</span>
+            <span class="t-data">$500/KW + O&amp;M LOANS</span>
+          </div>
+          <div class="priority-card__detail">
+            <span class="t-label">DEADLINE</span>
+            <span class="t-data">SPRING 2026</span>
+          </div>
+          <div class="priority-card__detail">
+            <span class="t-label">APOLLO ROLE</span>
+            <span class="t-data" style="color: var(--accent);">APPROVED VENDOR</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- P2 -->
+      <div class="priority-card hover-lift">
+        <div class="priority-card__header">
+          <span class="priority-card__number">P2</span>
+          <span class="t-label">SECTION 30C ALT FUEL CREDIT</span>
+        </div>
+        <h3 class="t-display t-display--sub">SEC. 30C</h3>
+        <p class="t-body">Alt Fuel Refueling Property Credit &mdash; 30% up to $100K per port for EV, CNG, and LNG installations. Hard expiration June 30, 2026.</p>
+        <div class="priority-card__details">
+          <div class="priority-card__detail">
+            <span class="t-label">VALUE</span>
+            <span class="t-data">30% UP TO $100K/PORT</span>
+          </div>
+          <div class="priority-card__detail">
+            <span class="t-label">DEADLINE</span>
+            <span class="t-data" style="color: var(--alert);">JUN 30, 2026</span>
+          </div>
+          <div class="priority-card__detail">
+            <span class="t-label">APOLLO ROLE</span>
+            <span class="t-data">INSTALLER + PASS-THROUGH</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- P3 -->
+      <div class="priority-card priority-card--wide hover-lift">
+        <div class="priority-card__header">
+          <span class="priority-card__number priority-card__number--green">P3</span>
+          <span class="t-label" style="color: var(--energy-green);">DOE SPARK / GRID RESILIENCE INNOVATION PARTNERSHIPS</span>
+        </div>
+        <h3 class="t-display t-display--sub">GRIP RD. 3</h3>
+        <p class="t-body">$1.9B DOE program &mdash; Awards of $10M to $100M for grid resilience and smart grid projects. Apollo provides O&amp;M subcontractor services to utility and government partners.</p>
+        <div class="priority-card__details">
+          <div class="priority-card__detail">
+            <span class="t-label">PROGRAM SIZE</span>
+            <span class="t-data">$1.9B TOTAL POOL</span>
+          </div>
+          <div class="priority-card__detail">
+            <span class="t-label">AWARD RANGE</span>
+            <span class="t-data">$10M &mdash; $100M</span>
+          </div>
+          <div class="priority-card__detail">
+            <span class="t-label">CONCEPT PAPER</span>
+            <span class="t-data" style="color: var(--alert);">APR 2, 2026</span>
+          </div>
+          <div class="priority-card__detail">
+            <span class="t-label">FULL APPLICATION</span>
+            <span class="t-data">MAY 20, 2026</span>
+          </div>
+          <div class="priority-card__detail">
+            <span class="t-label">APOLLO ROLE</span>
+            <span class="t-data" style="color: var(--energy-green);">O&amp;M SUBCONTRACTOR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     04 — 90-DAY TIMELINE
+     ============================================ -->
+<section class="section section--dark" id="timeline">
+  <div class="container">
+    <span class="t-label animate-on-scroll" style="color: var(--accent);">[ 03 &mdash; EXECUTION TIMELINE ]</span>
+
+    <h2 class="t-display t-display--section animate-on-scroll stagger-1" style="margin-top: 1rem;">
+      90 DAYS<br>3 PHASES
+    </h2>
+
+    <!-- Phase headers -->
+    <div class="timeline-header animate-on-scroll stagger-2">
+      <div class="timeline-header__label">
+        <span class="t-label" style="color: var(--substrate);">TRACK ///</span>
+      </div>
+      <div class="timeline-phase">
+        <span class="timeline-phase__name">01 &mdash; FOUNDATION</span>
+        <span class="timeline-phase__dates">WK 1&ndash;4 // MAR 25 &mdash; APR 22</span>
+      </div>
+      <div class="timeline-phase">
+        <span class="timeline-phase__name">02 &mdash; EXECUTION</span>
+        <span class="timeline-phase__dates">WK 5&ndash;9 // APR 23 &mdash; MAY 27</span>
+      </div>
+      <div class="timeline-phase">
+        <span class="timeline-phase__name">03 &mdash; CAPTURE</span>
+        <span class="timeline-phase__dates">WK 10&ndash;13 // MAY 28 &mdash; JUN 22</span>
+      </div>
+    </div>
+
+    <!-- Track rows -->
+    <div class="timeline-tracks animate-on-scroll stagger-3">
+      <!-- P1 TBPP -->
+      <div class="timeline-track-label">
+        <span class="t-label" style="color: var(--accent);">P1</span>
+        <span class="t-data">TBPP</span>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">Rulemaking review + PUCT staff contact</div>
+        <div class="timeline-cell__item">Vendor qualification package draft</div>
+        <div class="timeline-cell__item">Target facility identification (3&ndash;5/state)</div>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">Monitor PUCT for final rulemaking</div>
+        <div class="timeline-cell__item">Site assessments across 5 states</div>
+        <div class="timeline-cell__item">Service agreement template drafted</div>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">Vendor package submitted</div>
+        <div class="timeline-cell__item">Marketing materials finalized</div>
+        <div class="timeline-cell__item">Pipeline: 20+ facilities in discussion</div>
+      </div>
+
+      <!-- P2 30C -->
+      <div class="timeline-track-label">
+        <span class="t-label">P2</span>
+        <span class="t-data">SEC. 30C</span>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">Pipeline audit &mdash; all projects flagged</div>
+        <div class="timeline-cell__item">Tax counsel engaged on interpretation</div>
+        <div class="timeline-cell__item">Top 10 client deadline notifications</div>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">All eligible projects mobilized</div>
+        <div class="timeline-cell__item">Weekly client compliance check-ins</div>
+        <div class="timeline-cell__item">IRS Form 8911 documentation begun</div>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">All installations complete by Jun 30</div>
+        <div class="timeline-cell__item">Tax credit documentation finalized</div>
+        <div class="timeline-cell__item">Client pass-through packages delivered</div>
+      </div>
+
+      <!-- P3 GRIP -->
+      <div class="timeline-track-label">
+        <span class="t-label" style="color: var(--energy-green);">P3</span>
+        <span class="t-data">GRIP RD. 3</span>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">Partner target list (10+ utilities)</div>
+        <div class="timeline-cell__item">Subcontractor value prop one-pager</div>
+        <div class="timeline-cell__item">Utility outreach &mdash; concept paper slots</div>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">Letters of commitment signed</div>
+        <div class="timeline-cell__item">O&amp;M scope narrative drafted</div>
+        <div class="timeline-cell__item">Full applications submitted (May 20)</div>
+      </div>
+      <div class="timeline-cell">
+        <div class="timeline-cell__item">Award notifications tracked</div>
+        <div class="timeline-cell__item">O&amp;M subcontracts executed</div>
+        <div class="timeline-cell__item">Non-awarded debrief + Rd. 4 prep</div>
+      </div>
+    </div>
+
+    <!-- Milestones -->
+    <div class="milestones animate-on-scroll stagger-4">
+      <div class="milestone">
+        <span class="t-label">APR 2, 2026</span>
+        <span class="t-data" style="margin-top: 0.25rem;">GRIP CONCEPT PAPERS DUE</span>
+      </div>
+      <div class="milestone">
+        <span class="t-label">MAY 20, 2026</span>
+        <span class="t-data" style="margin-top: 0.25rem;">GRIP FULL APPLICATIONS</span>
+      </div>
+      <div class="milestone milestone--alert">
+        <span class="t-label">JUN 30, 2026</span>
+        <span class="t-data" style="margin-top: 0.25rem;">SECTION 30C HARD DEADLINE</span>
+      </div>
+      <div class="milestone milestone--accent">
+        <span class="t-label">SPRING 2026</span>
+        <span class="t-data" style="margin-top: 0.25rem;">TBPP VENDOR REG OPENS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     05 — PHASE 1: FOUNDATION
+     ============================================ -->
+<section class="section" id="phase1">
+  <div class="container">
+    <span class="t-label t-label--accent animate-on-scroll">[ 04 &mdash; PHASE 1 ]</span>
+
+    <div class="phase-header animate-on-scroll stagger-1">
+      <span class="phase-header__number">01</span>
+      <div class="phase-header__title">
+        <h2 class="t-display t-display--section">FOUNDATION</h2>
+        <span class="t-label" style="margin-top: 0.5rem;">ESTABLISH INSTITUTIONAL POSITIONING &amp; GATHER INTELLIGENCE</span>
+      </div>
+      <div class="phase-header__dates">
+        <span class="t-data">WEEKS 1&ndash;4</span><br>
+        <span class="t-label">MAR 25 &mdash; APR 22</span>
+      </div>
+    </div>
+
+    <div class="phase-description animate-on-scroll stagger-2">
+      <p class="t-body">The first 30 days establish Apollo&rsquo;s institutional positioning and gather intelligence across all three tracks simultaneously. No bid is submitted yet &mdash; this phase is about being in the room before the doors close.</p>
+    </div>
+
+    <div class="phase-tracks animate-on-scroll stagger-3">
+      <!-- P1 TBPP -->
+      <div class="phase-track">
+        <div class="phase-track__header">
+          <div class="phase-track__icon phase-track__icon--teal">P1</div>
+          <div>
+            <span class="t-label t-label--accent">TBPP</span><br>
+            <span class="t-data">BECOME AN APPROVED VENDOR</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>Download and review PUCT Project No. 59024 rulemaking docket in full at txenergyfund.texas.gov/TBPP</li>
+          <li>File public comments if comment window is open &mdash; establishes Apollo&rsquo;s presence in the rulemaking record</li>
+          <li>Identify the PUCT staff lead for the TBPP approved vendor list and initiate contact</li>
+          <li>Begin compiling the vendor qualification package: insurance certificates, licenses in TX, OK, AR, LA, TN, financial statements, O&amp;M service examples</li>
+          <li>Identify 3&ndash;5 target critical facility clients (hospitals, nursing homes, emergency shelters) in each state for outreach once vendor list is live</li>
+        </ul>
+      </div>
+
+      <!-- P2 30C -->
+      <div class="phase-track">
+        <div class="phase-track__header">
+          <div class="phase-track__icon">P2</div>
+          <div>
+            <span class="t-label">SECTION 30C</span><br>
+            <span class="t-data">AUDIT &amp; ACCELERATE PIPELINE</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>Pull every active EV, CNG, and LNG project from Apollo&rsquo;s CRM &mdash; flag each one for 30C eligibility (census tract, prevailing wage status, timeline to completion)</li>
+          <li>Engage Apollo&rsquo;s tax counsel to confirm interpretation of 30C for both direct Apollo capex and client pass-through claims</li>
+          <li>Build a 30C tracker spreadsheet: project name, site address, census tract eligibility, PWA status, estimated credit value, projected completion date</li>
+          <li>Contact top 10 EV/CNG/LNG clients to alert them of the June 30 deadline and schedule a 30C strategy call for weeks 2&ndash;3</li>
+          <li>Brief Apollo&rsquo;s install crews on prevailing wage and apprenticeship documentation requirements &mdash; compliance gaps kill the credit</li>
+        </ul>
+      </div>
+
+      <!-- P3 GRIP -->
+      <div class="phase-track phase-track--wide">
+        <div class="phase-track__header">
+          <div class="phase-track__icon phase-track__icon--green">P3</div>
+          <div>
+            <span class="t-label" style="color: var(--energy-green);">DOE GRIP ROUND 3</span><br>
+            <span class="t-data">PARTNER IDENTIFICATION</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>Research utilities and municipalities in TX, OK, AR, LA, and TN with active grid resilience or smart grid initiatives</li>
+          <li>Contact at least 3 utilities or government entities that are likely to submit GRIP concept papers by April 2</li>
+          <li>Draft Apollo&rsquo;s O&amp;M subcontractor value proposition one-pager (qualifications, service territory, track record, past performance on grid infrastructure)</li>
+          <li>Reach out to Apollo&rsquo;s existing utility relationships &mdash; ask directly if they are preparing a GRIP concept paper and request a subcontractor slot</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 1 Action Table -->
+    <table class="action-table animate-on-scroll stagger-4">
+      <thead>
+        <tr>
+          <th>WEEK</th>
+          <th>ACTION ITEM</th>
+          <th>PRIORITY</th>
+          <th>OWNER</th>
+          <th>DEADLINE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-week">WK 1</td>
+          <td>PUCT rulemaking review + TBPP staff contact</td>
+          <td class="td-priority td-priority--p1">P1 &mdash; TBPP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">APR 1</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 1</td>
+          <td>30C pipeline audit &mdash; all active projects flagged</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>PM + FINANCE</td>
+          <td class="td-deadline">APR 1</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 1</td>
+          <td>GRIP partner target list (10+ utilities/munis)</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">APR 1</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 2</td>
+          <td>Tax counsel engaged on 30C interpretation</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>FINANCE/LEGAL</td>
+          <td class="td-deadline">APR 8</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 2</td>
+          <td>Top 10 client 30C deadline notification sent</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">APR 8</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 2</td>
+          <td>Utility outreach calls &mdash; GRIP subcontractor pitch</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">APR 8</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 3</td>
+          <td>Vendor qualification package draft complete</td>
+          <td class="td-priority td-priority--p1">P1 &mdash; TBPP</td>
+          <td>OPS + ADMIN</td>
+          <td class="td-deadline">APR 15</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 3</td>
+          <td>30C tracker built and shared with BD team</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>PM</td>
+          <td class="td-deadline">APR 15</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 3</td>
+          <td>PWA documentation protocol issued to install crews</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>OPS</td>
+          <td class="td-deadline">APR 15</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 4</td>
+          <td>GRIP concept paper partners confirmed or denied</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">APR 22</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 4</td>
+          <td>O&amp;M subcontractor one-pager finalized</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">APR 22</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 4</td>
+          <td>Phase 1 review &mdash; weekly tracker updated</td>
+          <td class="td-priority">ALL</td>
+          <td>LEADERSHIP</td>
+          <td class="td-deadline">APR 22</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================
+     06 — PHASE 2: EXECUTION
+     ============================================ -->
+<section class="section" id="phase2">
+  <div class="container">
+    <span class="t-label t-label--accent animate-on-scroll">[ 05 &mdash; PHASE 2 ]</span>
+
+    <div class="phase-header animate-on-scroll stagger-1">
+      <span class="phase-header__number">02</span>
+      <div class="phase-header__title">
+        <h2 class="t-display t-display--section">EXECUTION</h2>
+        <span class="t-label" style="margin-top: 0.5rem;">HIGHEST-INTENSITY PERIOD &mdash; PARALLEL TRACK MOBILIZATION</span>
+      </div>
+      <div class="phase-header__dates">
+        <span class="t-data">WEEKS 5&ndash;9</span><br>
+        <span class="t-label">APR 23 &mdash; MAY 27</span>
+      </div>
+    </div>
+
+    <div class="callout animate-on-scroll stagger-2">
+      <p class="callout__text">
+        &gt;&gt;&gt; CRITICAL: Any EV, CNG, or LNG installation that will not reach completion before June 30, 2026 should be deprioritized in favor of 30C-eligible projects. The financial impact of a $100K/port credit forfeiture is significant.
+      </p>
+    </div>
+
+    <div class="phase-tracks animate-on-scroll stagger-3">
+      <!-- P1 TBPP -->
+      <div class="phase-track">
+        <div class="phase-track__header">
+          <div class="phase-track__icon phase-track__icon--teal">P1</div>
+          <div>
+            <span class="t-label t-label--accent">TBPP</span><br>
+            <span class="t-data">ACTIVE ENGAGEMENT</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>Monitor PUCT for final rulemaking publication &mdash; set calendar alert for spring 2026 effective date</li>
+          <li>Maintain contact with PUCT staff and track approved vendor list registration process</li>
+          <li>Begin site assessments for target critical facilities in all 5 states &mdash; build Apollo&rsquo;s TBPP pipeline of prospective clients</li>
+          <li>Draft TBPP service agreement template for backup power O&amp;M and preventative maintenance scope</li>
+          <li>Attend any PUCT stakeholder meetings or industry hearings related to TBPP</li>
+        </ul>
+      </div>
+
+      <!-- P2 30C -->
+      <div class="phase-track">
+        <div class="phase-track__header">
+          <div class="phase-track__icon">P2</div>
+          <div>
+            <span class="t-label">SECTION 30C</span><br>
+            <span class="t-data">INSTALL &amp; DOCUMENT</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>Mobilize all 30C-eligible installation projects &mdash; pull schedule forward wherever feasible</li>
+          <li>Weekly check-in with each client on 30C-eligible projects: confirm census tract status, PWA compliance, completion tracking</li>
+          <li>For clients claiming 30C on Apollo&rsquo;s work: provide formal letter documenting costs per site, prevailing wage compliance, and apprenticeship hours</li>
+          <li>Begin compiling IRS Form 8911 documentation packages for Apollo&rsquo;s own direct capex credits</li>
+          <li>Identify new prospective clients who can approve and begin a project before June 30 &mdash; short-cycle opportunities like parking structure charging stations</li>
+        </ul>
+      </div>
+
+      <!-- P3 GRIP -->
+      <div class="phase-track phase-track--wide">
+        <div class="phase-track__header">
+          <div class="phase-track__icon phase-track__icon--green">P3</div>
+          <div>
+            <span class="t-label" style="color: var(--energy-green);">DOE GRIP ROUND 3</span><br>
+            <span class="t-data">SUBCONTRACTOR AGREEMENTS</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>For each utility or government partner submitting a concept paper: provide a signed letter of commitment from Apollo as O&amp;M subcontractor</li>
+          <li>Review submitted concept papers if shared by partners &mdash; ensure Apollo&rsquo;s scope is clearly defined and scoped at appropriate cost</li>
+          <li>Track DOE concept paper results (notifications expected within 30&ndash;60 days of April 2 deadline)</li>
+          <li>Begin drafting Apollo&rsquo;s O&amp;M scope narrative for full application (due May 20, 2026) &mdash; past performance, personnel, equipment, service territory</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 2 Action Table -->
+    <table class="action-table animate-on-scroll stagger-4">
+      <thead>
+        <tr>
+          <th>WEEK</th>
+          <th>ACTION ITEM</th>
+          <th>PRIORITY</th>
+          <th>OWNER</th>
+          <th>DEADLINE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-week">WK 5</td>
+          <td>TBPP target facility site assessments begin</td>
+          <td class="td-priority td-priority--p1">P1 &mdash; TBPP</td>
+          <td>OPS</td>
+          <td class="td-deadline">APR 30</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 5</td>
+          <td>All 30C projects mobilized / schedules confirmed</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>PM</td>
+          <td class="td-deadline">APR 30</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 5</td>
+          <td>GRIP subcontractor letters of commitment drafted</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">APR 30</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 6</td>
+          <td>TBPP service agreement template drafted</td>
+          <td class="td-priority td-priority--p1">P1 &mdash; TBPP</td>
+          <td>LEGAL</td>
+          <td class="td-deadline">MAY 7</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 6</td>
+          <td>30C client documentation letters issued</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>FINANCE</td>
+          <td class="td-deadline">MAY 7</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 6</td>
+          <td>GRIP subcontractor letters signed + submitted to partners</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">MAY 7</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 7</td>
+          <td>TBPP facility pipeline: 10+ prospects per state</td>
+          <td class="td-priority td-priority--p1">P1 &mdash; TBPP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">MAY 14</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 7</td>
+          <td>30C install progress review &mdash; flag at-risk completions</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>PM</td>
+          <td class="td-deadline">MAY 14</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 7</td>
+          <td>DOE concept paper status check with each partner</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">MAY 14</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 8</td>
+          <td>Apollo O&amp;M scope narrative for GRIP drafted</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>OPS + BD</td>
+          <td class="td-deadline">MAY 20</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 8</td>
+          <td>New short-cycle 30C prospecting calls complete</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">MAY 20</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 9</td>
+          <td>GRIP full applications submitted by partners (May 20)</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>PARTNERS</td>
+          <td class="td-deadline">MAY 27</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 9</td>
+          <td>30C completion trajectory &mdash; 95%+ projects on track</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>PM</td>
+          <td class="td-deadline">MAY 27</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 9</td>
+          <td>Phase 2 review + Phase 3 prep</td>
+          <td class="td-priority">ALL</td>
+          <td>LEADERSHIP</td>
+          <td class="td-deadline">MAY 27</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================
+     07 — PHASE 3: CAPTURE & CLOSE
+     ============================================ -->
+<section class="section" id="phase3">
+  <div class="container">
+    <span class="t-label t-label--accent animate-on-scroll">[ 06 &mdash; PHASE 3 ]</span>
+
+    <div class="phase-header animate-on-scroll stagger-1">
+      <span class="phase-header__number">03</span>
+      <div class="phase-header__title">
+        <h2 class="t-display t-display--section">CAPTURE<br>&amp; CLOSE</h2>
+        <span class="t-label" style="margin-top: 0.5rem;">CONVERT EFFORT INTO LOCKED REVENUE</span>
+      </div>
+      <div class="phase-header__dates">
+        <span class="t-data">WEEKS 10&ndash;13</span><br>
+        <span class="t-label">MAY 28 &mdash; JUN 22</span>
+      </div>
+    </div>
+
+    <div class="phase-description animate-on-scroll stagger-2">
+      <p class="t-body">The final phase converts effort into locked revenue. 30C installations must reach substantial completion before June 30. TBPP vendor positioning is maintained. GRIP award notifications are tracked, and Apollo prepares for post-award teaming and contract execution.</p>
+    </div>
+
+    <div class="phase-tracks animate-on-scroll stagger-3">
+      <!-- P1 TBPP -->
+      <div class="phase-track">
+        <div class="phase-track__header">
+          <div class="phase-track__icon phase-track__icon--teal">P1</div>
+          <div>
+            <span class="t-label t-label--accent">TBPP</span><br>
+            <span class="t-data">VENDOR LIST READY</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>Final vendor qualification package submitted to PUCT as soon as approved vendor list registration opens</li>
+          <li>TBPP client pipeline maintained &mdash; at least 15&ndash;20 target critical facilities under active discussion across TX, OK, AR, LA, TN</li>
+          <li>TBPP marketing materials finalized: one-pager for facility administrators, reference sheet on grant/loan structure ($500/kW, forgivable O&amp;M loans)</li>
+          <li>Apollo leadership attends at least one PUCT public meeting or energy industry event to establish presence</li>
+        </ul>
+      </div>
+
+      <!-- P2 30C -->
+      <div class="phase-track">
+        <div class="phase-track__header">
+          <div class="phase-track__icon">P2</div>
+          <div>
+            <span class="t-label">SECTION 30C</span><br>
+            <span class="t-data">FINAL PUSH</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>All 30C-eligible projects at or ahead of completion schedule &mdash; daily status for at-risk projects</li>
+          <li>For any project that cannot reach completion before June 30: begin processing as-built documentation now so credit claim is ready if rules allow substantial completion standard</li>
+          <li>Tax counsel to file or prepare to file Form 8911 for all Apollo direct credits</li>
+          <li>Provide final 30C documentation packages to all client pass-through recipients</li>
+          <li>Capture post-project: document total credit value generated for Apollo and clients &mdash; use as marketing asset for future business development</li>
+        </ul>
+      </div>
+
+      <!-- P3 GRIP -->
+      <div class="phase-track phase-track--wide">
+        <div class="phase-track__header">
+          <div class="phase-track__icon phase-track__icon--green">P3</div>
+          <div>
+            <span class="t-label" style="color: var(--energy-green);">DOE GRIP ROUND 3</span><br>
+            <span class="t-data">AWARD TRACKING &amp; POST-AWARD PREP</span>
+          </div>
+        </div>
+        <ul class="phase-track__list">
+          <li>Track DOE notifications to partner utilities &mdash; awards typically announced 60&ndash;90 days post-full application</li>
+          <li>For awarded partners: execute formal O&amp;M subcontract agreements with Apollo</li>
+          <li>For non-awarded partners: debrief with DOE if available, identify lessons for next round</li>
+          <li>Begin scoping O&amp;M service plans for expected grid resilience project scopes in Apollo&rsquo;s service territory</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Phase 3 Action Table -->
+    <table class="action-table animate-on-scroll stagger-4">
+      <thead>
+        <tr>
+          <th>WEEK</th>
+          <th>ACTION ITEM</th>
+          <th>PRIORITY</th>
+          <th>OWNER</th>
+          <th>DEADLINE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-week">WK 10</td>
+          <td>TBPP vendor qualification package submitted</td>
+          <td class="td-priority td-priority--p1">P1 &mdash; TBPP</td>
+          <td>OPS + ADMIN</td>
+          <td class="td-deadline">JUN 3</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 10</td>
+          <td>30C at-risk project daily tracking begins</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>PM</td>
+          <td class="td-deadline">JUN 3</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 10</td>
+          <td>GRIP award notification tracking initiated</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">JUN 3</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 11</td>
+          <td>TBPP marketing materials finalized</td>
+          <td class="td-priority td-priority--p1">P1 &mdash; TBPP</td>
+          <td>MARKETING</td>
+          <td class="td-deadline">JUN 10</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 11</td>
+          <td>30C &mdash; all projects at substantial completion</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>PM</td>
+          <td class="td-deadline">JUN 10</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 11</td>
+          <td>GRIP O&amp;M subcontract templates drafted</td>
+          <td class="td-priority td-priority--p3">P3 &mdash; GRIP</td>
+          <td>LEGAL</td>
+          <td class="td-deadline">JUN 10</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 12</td>
+          <td>30C tax credit documentation finalized (all projects)</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>FINANCE + LEGAL</td>
+          <td class="td-deadline">JUN 17</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 12</td>
+          <td>30C client pass-through packages delivered</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">JUN 17</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 12</td>
+          <td>TBPP pipeline review &mdash; 20+ facilities per state</td>
+          <td class="td-priority td-priority--p1">P1 &mdash; TBPP</td>
+          <td>BD LEAD</td>
+          <td class="td-deadline">JUN 17</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 13</td>
+          <td style="color: var(--alert); font-weight: 700;">30C DEADLINE &mdash; ALL INSTALLATIONS COMPLETE</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>PM + OPS</td>
+          <td class="td-deadline" style="color: var(--alert); font-weight: 700;">JUN 30</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 13</td>
+          <td>30C post-mortem: total credit value captured</td>
+          <td class="td-priority td-priority--p2">P2 &mdash; SEC. 30C</td>
+          <td>FINANCE</td>
+          <td class="td-deadline">JUN 30</td>
+        </tr>
+        <tr>
+          <td class="td-week">WK 13</td>
+          <td>90-day plan review + Q3 planning initiated</td>
+          <td class="td-priority">ALL</td>
+          <td>LEADERSHIP</td>
+          <td class="td-deadline">JUN 30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================
+     08 — RISK REGISTER
+     ============================================ -->
+<section class="section section--dark" id="risk">
+  <div class="container">
+    <span class="t-label animate-on-scroll" style="color: var(--accent);">[ 07 &mdash; RISK REGISTER ]</span>
+
+    <h2 class="t-display t-display--section animate-on-scroll stagger-1" style="margin-top: 1rem;">
+      RISK &amp;<br>CONTINGENCIES
+    </h2>
+
+    <div class="risk-grid animate-on-scroll stagger-2">
+      <!-- Header -->
+      <div class="risk-row risk-row--header">
+        <div class="risk-cell"><span class="t-label" style="color: var(--substrate);">RISK</span></div>
+        <div class="risk-cell"><span class="t-label" style="color: var(--substrate);">LIKELIHOOD</span></div>
+        <div class="risk-cell"><span class="t-label" style="color: var(--substrate);">IMPACT</span></div>
+        <div class="risk-cell"><span class="t-label" style="color: var(--substrate);">MITIGATION</span></div>
+      </div>
+
+      <!-- Risk 1 -->
+      <div class="risk-row">
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">30C installation delays &mdash; crews, supply chain, permits</span>
+        </div>
+        <div class="risk-cell" style="text-align: center;">
+          <span class="risk-likelihood risk-likelihood--high">[ HIGH ]</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Loss of up to $100K/port credit</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Front-load permits now; identify backup subcontractors; reprioritize schedule weekly</span>
+        </div>
+      </div>
+
+      <!-- Risk 2 -->
+      <div class="risk-row">
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">PWA non-compliance on 30C projects</span>
+        </div>
+        <div class="risk-cell" style="text-align: center;">
+          <span class="risk-likelihood risk-likelihood--medium">[ MEDIUM ]</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Credit drops from 30% to 6%</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Issue PWA protocol to crews immediately (Week 1); weekly compliance audits</span>
+        </div>
+      </div>
+
+      <!-- Risk 3 -->
+      <div class="risk-row">
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">TBPP final rules delayed past June 2026</span>
+        </div>
+        <div class="risk-cell" style="text-align: center;">
+          <span class="risk-likelihood risk-likelihood--medium">[ MEDIUM ]</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Vendor registration delayed; pipeline stalls</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Continue facility pipeline development regardless; position for first-mover advantage at launch</span>
+        </div>
+      </div>
+
+      <!-- Risk 4 -->
+      <div class="risk-row">
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">No GRIP utility partner identified in time</span>
+        </div>
+        <div class="risk-cell" style="text-align: center;">
+          <span class="risk-likelihood risk-likelihood--medium">[ MEDIUM ]</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Apollo misses Round 3 subcontractor slot</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Identify 5+ partners (not 1&ndash;2); if none commit, prepare for Round 4 positioning</span>
+        </div>
+      </div>
+
+      <!-- Risk 5 -->
+      <div class="risk-row">
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Section 30C extended or amended post-OBBBA</span>
+        </div>
+        <div class="risk-cell" style="text-align: center;">
+          <span class="risk-likelihood risk-likelihood--low">[ LOW ]</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Upside: more time; treat as bonus, not plan</span>
+        </div>
+        <div class="risk-cell">
+          <span class="t-data" style="text-transform: none;">Execute to June 30 deadline regardless; any extension is gravy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Environment Monitoring -->
+    <div style="margin-top: 3rem;">
+      <span class="t-label animate-on-scroll" style="color: var(--accent);">[ POLICY ENVIRONMENT MONITORING ]</span>
+      <p class="t-body animate-on-scroll stagger-1" style="margin-top: 1rem; color: #B0BFD0;">
+        Designate one person (BD Lead or a policy advisor) as the policy monitor responsible for tracking the following sources on a bi-weekly basis:
+      </p>
+
+      <div class="monitor-grid animate-on-scroll stagger-2" style="background: #1A3460;">
+        <div class="monitor-card" style="background: var(--apollo-navy);">
+          <span class="monitor-card__source">PUCT</span>
+          <span class="monitor-card__desc" style="color: #B0BFD0;">txenergyfund.texas.gov/TBPP &mdash; TBPP rulemaking updates, Project No. 59024</span>
+        </div>
+        <div class="monitor-card" style="background: var(--apollo-navy);">
+          <span class="monitor-card__source">IRS</span>
+          <span class="monitor-card__desc" style="color: #B0BFD0;">irs.gov/credits-deductions/30C &mdash; guidance updates on 30C expiration or PWA interpretation</span>
+        </div>
+        <div class="monitor-card" style="background: var(--apollo-navy);">
+          <span class="monitor-card__source">DOE</span>
+          <span class="monitor-card__desc" style="color: #B0BFD0;">energy.gov/gdo &mdash; SPARK/GRIP Round 3 announcements, concept paper results, full application awards</span>
+        </div>
+        <div class="monitor-card" style="background: var(--apollo-navy);">
+          <span class="monitor-card__source">FHWA</span>
+          <span class="monitor-card__desc" style="color: #B0BFD0;">NEVI state plan updates for TX, OK, AR, LA, TN &mdash; indirect opportunity for Apollo EV charging work</span>
+        </div>
+        <div class="monitor-card" style="background: var(--apollo-navy);">
+          <span class="monitor-card__source">CONGRESS</span>
+          <span class="monitor-card__desc" style="color: #B0BFD0;">Track any legislation to extend 30C beyond June 30, 2026 &mdash; treat as low probability but monitor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     09 — KPIs & SUCCESS METRICS
+     ============================================ -->
+<section class="section" id="kpi">
+  <div class="container">
+    <span class="t-label t-label--accent animate-on-scroll">[ 08 &mdash; SUCCESS METRICS ]</span>
+
+    <h2 class="t-display t-display--section animate-on-scroll stagger-1" style="margin-top: 1rem;">
+      KEY<br>PERFORMANCE<br>INDICATORS
+    </h2>
+
+    <div class="kpi-grid animate-on-scroll stagger-2">
+      <!-- Header -->
+      <div class="kpi-row kpi-row--header">
+        <div class="kpi-cell"><span class="t-label" style="color: var(--substrate);">METRIC</span></div>
+        <div class="kpi-cell"><span class="t-label" style="color: var(--substrate);">30-DAY TARGET</span></div>
+        <div class="kpi-cell"><span class="t-label" style="color: var(--substrate);">60-DAY TARGET</span></div>
+        <div class="kpi-cell"><span class="t-label" style="color: var(--substrate);">90-DAY TARGET</span></div>
+      </div>
+
+      <!-- KPI 1 -->
+      <div class="kpi-row">
+        <div class="kpi-cell"><span class="t-data" style="font-weight: 700; text-transform: none;">30C eligible projects in execution</span></div>
+        <div class="kpi-cell"><span class="kpi-target">100% of pipeline audited &amp; flagged</span></div>
+        <div class="kpi-cell"><span class="kpi-target">90%+ projects mobilized</span></div>
+        <div class="kpi-cell"><span class="kpi-target kpi-target--final">100% COMPLETE BY JUN 30</span></div>
+      </div>
+
+      <!-- KPI 2 -->
+      <div class="kpi-row">
+        <div class="kpi-cell"><span class="t-data" style="font-weight: 700; text-transform: none;">30C tax credit value identified ($)</span></div>
+        <div class="kpi-cell"><span class="kpi-target">Total pipeline value calculated</span></div>
+        <div class="kpi-cell"><span class="kpi-target">75% of value locked in-flight</span></div>
+        <div class="kpi-cell"><span class="kpi-target kpi-target--final">100% FILED OR READY TO FILE</span></div>
+      </div>
+
+      <!-- KPI 3 -->
+      <div class="kpi-row">
+        <div class="kpi-cell"><span class="t-data" style="font-weight: 700; text-transform: none;">TBPP vendor qualification status</span></div>
+        <div class="kpi-cell"><span class="kpi-target">Package drafted</span></div>
+        <div class="kpi-cell"><span class="kpi-target">Package complete &amp; ready</span></div>
+        <div class="kpi-cell"><span class="kpi-target kpi-target--final">SUBMITTED AT FIRST OPPORTUNITY</span></div>
+      </div>
+
+      <!-- KPI 4 -->
+      <div class="kpi-row">
+        <div class="kpi-cell"><span class="t-data" style="font-weight: 700; text-transform: none;">TBPP facility pipeline (all 5 states)</span></div>
+        <div class="kpi-cell"><span class="kpi-target">10+ targets identified per state</span></div>
+        <div class="kpi-cell"><span class="kpi-target">Active discussions w/ 5+ per state</span></div>
+        <div class="kpi-cell"><span class="kpi-target kpi-target--final">20+ QUALIFIED PROSPECTS TOTAL</span></div>
+      </div>
+
+      <!-- KPI 5 -->
+      <div class="kpi-row">
+        <div class="kpi-cell"><span class="t-data" style="font-weight: 700; text-transform: none;">GRIP utility/govt partners engaged</span></div>
+        <div class="kpi-cell"><span class="kpi-target">5+ partners contacted</span></div>
+        <div class="kpi-cell"><span class="kpi-target">2+ concept paper letters submitted</span></div>
+        <div class="kpi-cell"><span class="kpi-target kpi-target--final">SUBCONTRACT MOU WITH 1+ AWARDEE</span></div>
+      </div>
+
+      <!-- KPI 6 -->
+      <div class="kpi-row">
+        <div class="kpi-cell"><span class="t-data" style="font-weight: 700; text-transform: none;">Client 30C briefings completed</span></div>
+        <div class="kpi-cell"><span class="kpi-target">Top 10 clients notified</span></div>
+        <div class="kpi-cell"><span class="kpi-target">All eligible clients briefed</span></div>
+        <div class="kpi-cell"><span class="kpi-target kpi-target--final">PASS-THROUGH DOCS DELIVERED TO ALL</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     10 — WEEKLY CADENCE
+     ============================================ -->
+<section class="section" id="cadence">
+  <div class="container">
+    <span class="t-label t-label--accent animate-on-scroll">[ 09 &mdash; GOVERNANCE ]</span>
+
+    <h2 class="t-display t-display--section animate-on-scroll stagger-1" style="margin-top: 1rem;">
+      WEEKLY<br>CADENCE
+    </h2>
+
+    <p class="t-body animate-on-scroll stagger-2" style="margin-top: 1.5rem;">
+      To maintain execution discipline across three parallel tracks, Apollo leadership holds a standing 30-minute weekly review every Monday covering:
+    </p>
+
+    <div class="cadence-grid animate-on-scroll stagger-3">
+      <div class="cadence-day">
+        <span class="cadence-day__text">MONDAY</span>
+      </div>
+      <div class="cadence-items">
+        <div class="cadence-item">
+          <span class="cadence-item__num">01</span>
+          <span class="cadence-item__text">30C install progress update: projects completed, in-flight, at-risk</span>
+        </div>
+        <div class="cadence-item">
+          <span class="cadence-item__num">02</span>
+          <span class="cadence-item__text">TBPP status: rulemaking updates, vendor package progress, facility pipeline count</span>
+        </div>
+        <div class="cadence-item">
+          <span class="cadence-item__num">03</span>
+          <span class="cadence-item__text">GRIP status: partner responses, concept paper submissions, award tracking</span>
+        </div>
+        <div class="cadence-item">
+          <span class="cadence-item__num">04</span>
+          <span class="cadence-item__text">Policy monitor report: any changes to 30C, TBPP, GRIP, or other relevant programs</span>
+        </div>
+        <div class="cadence-item">
+          <span class="cadence-item__num">05</span>
+          <span class="cadence-item__text">Blockers: anything that requires leadership decision or escalation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     11 — CLOSING
+     ============================================ -->
+<section class="closing" id="closing">
+  <div class="closing__content">
+    <div class="animate-on-scroll">
+      <span class="t-label" style="color: var(--accent);">[ SUMMARY ]</span>
+    </div>
+
+    <h2 class="t-display t-display--hero animate-on-scroll stagger-1" style="color: var(--substrate); max-width: 14ch;">
+      THREE TRACKS.<br><span style="color: var(--apollo-teal-bright);">ONE WINDOW.</span>
+    </h2>
+
+    <div class="closing__stats animate-on-scroll stagger-2">
+      <div class="closing__stat">
+        <span class="closing__stat-value">$1.8B</span>
+        <span class="closing__stat-label">TBPP PROGRAM VALUE</span>
+      </div>
+      <div class="closing__stat">
+        <span class="closing__stat-value">$100K</span>
+        <span class="closing__stat-label">PER PORT &mdash; 30C CREDIT</span>
+      </div>
+      <div class="closing__stat">
+        <span class="closing__stat-value">$1.9B</span>
+        <span class="closing__stat-label">GRIP ROUND 3 POOL</span>
+      </div>
+    </div>
+
+    <p class="t-body animate-on-scroll stagger-3" style="color: #B0BFD0; font-style: italic; font-size: 1.125rem;">
+      Execution begins now. The cost of delay is measurable.
+    </p>
+  </div>
+
+  <div class="closing__footer">
+    <img src="../apollo-logo-transparent.png" alt="Apollo Energy Group" style="width: 100px; height: auto; filter: drop-shadow(0 0 12px rgba(0,165,184,0.3));" />
+    <span class="t-label" style="color: var(--ink-ghost);">APOLLO ENERGY GROUP &copy; 2026</span>
+    <span class="t-label" style="color: var(--ink-ghost);">DOC-APL-90D // REV 1.0 // Q2 2026</span>
+    <span class="t-label" style="color: var(--accent);">CONFIDENTIAL</span>
+  </div>
+</section>
+
+<!-- ============================================
+     SCRIPTS — Scroll Reveal + Nav Rail
+     ============================================ -->
+<script>
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Navigation rail
+  const sections = document.querySelectorAll('section[id]');
+  const dots = document.querySelectorAll('.nav-rail__dot');
+
+  // Click to scroll
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const target = document.getElementById(dot.dataset.target);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Active dot tracking
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        dots.forEach(dot => {
+          dot.classList.toggle('nav-rail__dot--active', dot.dataset.target === id);
+        });
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '-30% 0px -70% 0px',
+    threshold: 0
+  });
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+</script>
+</body>
+</html>
